@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>کدخانه | کامپایلر آنلاین Python، C++، Java، PHP و HTML/CSS/JavaScript</title>
+<meta name="description" content="کامپایلر و ویرایشگر آنلاین رایگان برای اجرای Python، C، C++، Java، PHP، JavaScript، HTML و CSS در مرورگر؛ با پیش‌نمایش موبایل، تکمیل خودکار کد و تاریخچه نسخه‌ها.">
+<meta name="keywords" content="کامپایلر آنلاین, اجرای کد آنلاین, کامپایلر پایتون آنلاین, کامپایلر C++ آنلاین, کامپایلر جاوا آنلاین, کامپایلر PHP آنلاین, ویرایشگر کد آنلاین, اجرای HTML و CSS آنلاین, تست جاوااسکریپت آنلاین, کدخانه, online compiler, online python compiler, online c++ compiler, online java compiler, online php compiler, online code editor, html css javascript playground">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/">
+<!-- Google Search Console: کد تأیید را اینجا بگذارید
+<meta name="google-site-verification" content="YOUR_CODE"> -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="کدخانه">
+<meta property="og:title" content="کدخانه | کامپایلر آنلاین Python، C++، Java، PHP، HTML، CSS و JavaScript">
+<meta property="og:description" content="اجرای آنلاین کد با پیش‌نمایش موبایل، تکمیل خودکار و تاریخچه نسخه‌ها. رایگان و بدون نصب.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/">
+<meta property="og:locale" content="fa_IR">
+
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="کدخانه | Online Compiler">
+<meta name="twitter:description" content="Run Python, C, C++, Java, PHP, JavaScript, HTML and CSS online.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"کدخانه","alternateName":["Kodkhane","Online Compiler"],"url":"https://YOUR-USERNAME.github.io/YOUR-REPO/","applicationCategory":"DeveloperApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":["fa","en","ru","fr","ar"],"description":"Free online compiler and code editor for Python, C, C++, Java, PHP, JavaScript, HTML and CSS with mobile preview, autocomplete and version history.","featureList":["Python, C, C++, Java, PHP, JavaScript, HTML, CSS","iPhone-style mobile preview","Code autocomplete","Version history","Multiple themes"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg">
+<meta name="theme-color" content="#1e1e1e">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-m="python">
+<h1 class="sr">کدخانه؛ کامپایلر آنلاین Python، C، C++، Java، PHP، JavaScript، HTML و CSS</h1>
+<p class="sr">کدخانه یک ویرایشگر و کامپایلر آنلاین رایگان است. کد خود را بنویسید، با تکمیل خودکار کلمات کلیدی کامل کنید، با یک کلیک اجرا کنید و خروجی HTML، CSS و JavaScript را روی قاب موبایل ببینید. تاریخچه نسخه‌ها و بازگشت به کد قبلی هم دارد.</p>
+<noscript>برای استفاده از کامپایلر آنلاین کدخانه، جاوااسکریپت مرورگر را فعال کنید. / Please enable JavaScript to use this online compiler.</noscript>
+
+<canvas id="rain"></canvas>
+<header id="top">
+  <div class="brand"><img src="icon.svg" alt="" width="20" height="20">کدخانه</div>
+  <select id="lang" aria-label="Language">
+    <option value="python">Python</option><option value="c">C</option><option value="cpp">C++</option>
+    <option value="java">Java</option><option value="php">PHP</option><option value="javascript">JavaScript</option>
+    <option value="html">HTML</option><option value="css">CSS</option>
+  </select>
+  <button id="run" class="primary">▶</button>
+  <button id="clear" data-i="clear"></button>
+  <span class="sp"></span>
+  <button id="libs" data-i="libs"></button>
+  <button id="hist" data-i="hist"></button>
+  <button id="open" data-i="open"></button>
+  <button id="dl" data-i="save"></button>
+  <button id="inst" data-i="install" hidden></button>
+  <button id="set" data-i="settings"></button>
+  <button id="keys" data-i="keys"></button>
+  <select id="theme" aria-label="Theme">
+    <option value="light">Light</option><option value="dark">Dark</option><option value="hacker">Hacker</option>
+    <option value="monokai">Monokai</option><option value="dracula">Dracula</option><option value="nord">Nord</option>
+    <option value="solarized">Solarized</option><option value="cyberpunk">Cyberpunk</option>
+  </select>
+  <select id="ui" aria-label="UI language">
+    <option value="fa">فارسی</option><option value="en">English</option><option value="ru">Русский</option>
+    <option value="fr">Français</option><option value="ar">العربية</option>
+  </select>
+  <input type="file" id="file" hidden accept=".py,.c,.cpp,.java,.php,.js,.html,.htm,.css,.txt">
+</header>
+<main id="main">
+  <section id="left">
+    <div class="tabs"><div class="tab" id="fname">main.py</div><span class="sp"></span><button id="fs">A+</button><button id="fs2">A−</button></div>
+    <div class="ed"><div id="ln">1</div><div class="wrap"><pre id="hl"><code></code></pre><textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Code editor"></textarea></div></div>
+    <div id="htmlbox" hidden><div class="tabs"><div class="tab" data-i="htmlTab"></div></div><textarea id="html" spellcheck="false" aria-label="HTML"></textarea></div>
+  </section>
+  <div id="gut" role="separator"></div>
+  <section id="right">
+    <div id="phoneWrap">
+      <div id="devlbl">iPhone 18 Pro Max · 440×956</div>
+      <div id="phone"><div class="scr">
+        <div class="sb"><b>9:41</b><i id="isl"></i><span>5G ▮▮▮</span></div>
+        <iframe id="prev" sandbox="allow-scripts allow-forms allow-modals" title="preview"></iframe>
+        <div class="hb"><i></i></div>
+      </div></div>
+    </div>
+    <div id="con">
+      <div class="tabs"><div class="tab" data-i="terminal"></div><span class="sp"></span><span id="stat"></span></div>
+      <pre id="out"></pre>
+      <div id="inbox"><div class="tabs"><div class="tab" data-i="stdin"></div></div><textarea id="stdin" spellcheck="false"></textarea></div>
+    </div>
+  </section>
+</main>
+<footer id="status"><span id="sl"></span><span id="cur">Ln 1, Col 1</span><span>UTF-8</span><span class="sp"></span><span id="pyst"></span></footer>
+
+<dialog id="dlgL"><h3 data-i="libs"></h3><p class="note" data-i="libsNote"></p><div id="libform"></div><div class="row"><button class="primary" id="lok" data-i="ok"></button></div></dialog>
+<dialog id="dlgS"><h3 data-i="settings"></h3><p class="note" data-i="setNote"></p><label data-i="addr"></label><input id="jurl" dir="ltr"><label data-i="rkey"></label><input id="jkey" dir="ltr"><div class="row"><button class="primary" id="sok" data-i="ok"></button><button id="sno" data-i="close"></button></div></dialog>
+<dialog id="dlgK"><h3 data-i="keys"></h3><p class="note">⌘ = Ctrl (macOS)</p><div id="keylist"></div><form method="dialog" class="row"><button class="primary" data-i="close"></button></form></dialog>
+<dialog id="dlgH" class="wide"><h3 data-i="hist"></h3><div id="hwrap"><div id="hlist"></div><pre id="hprev"></pre></div><div class="row"><button id="hsnap" data-i="snap"></button><button id="hclr" data-i="hClear"></button><button id="hdel" data-i="del"></button><button class="primary" id="hres" data-i="restore"></button><button id="hclose" data-i="close"></button></div></dialog>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
