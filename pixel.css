@@ -1,0 +1,35 @@
+/* Pixel Account — تم اختصاصی CodeKhane 2.0: سرمه‌ای، بنفش، آبی نئونی */
+#pxbtn{display:inline-flex;align-items:center;gap:6px;border:2px solid #7c3aed;background:#0d1236;color:#e6e9ff}
+#pxbtn.in{border-color:#00e5ff}
+#pxbtn span{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.px{background:#0a0e27;color:#e6e9ff;border:2px solid #7c3aed;border-radius:0;padding:0;width:min(94vw,500px);max-height:92vh;overflow:auto;box-shadow:6px 6px 0 #3b1d8f,0 0 28px rgba(0,229,255,.25);font-family:Vazirmatn,Tahoma,sans-serif}
+.px::backdrop{background:rgba(5,7,25,.82)}
+.pxh{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:2px solid #2a2f6b;background:#0d1236}
+.pxh b{font-size:15px;letter-spacing:.5px}
+.pxh button,.px .pxtabs button,.pjr button{background:#151b4a;color:#e6e9ff;border:2px solid #2a2f6b;border-radius:0;cursor:pointer;padding:3px 10px}
+.pxh button:hover,.px .pxtabs button:hover,.pjr button:hover{border-color:#00e5ff}
+#pxmsg{display:none;margin:10px 14px 0;padding:6px 10px;border:2px solid;font-size:13px}
+#pxmsg.ok{display:block;color:#3ef0c4;border-color:#3ef0c4}
+#pxmsg.err{display:block;color:#ff5c8a;border-color:#ff5c8a}
+.pxv,.pxs2{padding:14px}
+.pxv[hidden],#pxacc[hidden],.pxs2[hidden]{display:none}
+.px label{display:block;margin:10px 0 3px;font-size:12px;color:#a5b4ff}
+.px input[type=text],.px input[type=email],.px input[type=password]{width:100%;background:#070a1f;color:#e6e9ff;border:2px solid #2a2f6b;border-radius:0;padding:8px;font:14px monospace;direction:ltr;text-align:left}
+.px input:focus-visible{outline:0;border-color:#00e5ff;box-shadow:0 0 10px rgba(0,229,255,.4)}
+.px input[readonly]{opacity:.7}
+.pxb{width:100%;margin-top:14px;padding:9px;background:#7c3aed;color:#fff;font-weight:700;border:2px solid #00e5ff;border-radius:0;cursor:pointer;box-shadow:3px 3px 0 #3b1d8f}
+.pxb:hover{filter:brightness(1.15)}.pxb:disabled{opacity:.6;cursor:wait}
+.lnk{background:none;border:0;color:#00e5ff;text-decoration:underline;cursor:pointer;padding:6px 0;font:inherit}
+.pxhint{font-size:11px;min-height:16px;color:#8b93c9}.pxhint.ok{color:#3ef0c4}.pxhint.err{color:#ff5c8a}
+.pxs{height:6px;background:#1a1f5a;margin-top:4px}.pxs i{display:block;height:100%;width:0;transition:width .2s}
+.pxtabs{display:flex;gap:6px;flex-wrap:wrap;padding:10px 14px;border-bottom:2px solid #2a2f6b}
+.pxtabs button.on{background:#7c3aed;border-color:#00e5ff}.pxtabs .sp{flex:1}
+.pxav{--s:24px;width:var(--s);height:var(--s);border:2px solid #00e5ff;object-fit:cover;display:inline-grid;place-items:center;background:#7c3aed;color:#fff;font:700 calc(var(--s)*.5) monospace;flex:none}
+.pxprof{display:flex;align-items:center;gap:14px}
+.pxrow{display:flex;gap:8px}.pxrow input{flex:1}.pxrow .pxb{width:auto;margin:0;padding:6px 14px}
+.pxbadge{font-size:12px;color:#3ef0c4}.pxbadge.no{color:#ffb86c}
+.pjr{display:flex;gap:6px;align-items:center;border-bottom:1px solid #2a2f6b;padding:7px 0}
+.pjr>div{flex:1;min-width:0;display:flex;flex-direction:column}.pjr b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pjr span{font-size:11px;color:#8b93c9}.pjr.on b{color:#00e5ff}
+#pjlist{margin-top:10px}
+@media(max-width:560px){.px{width:100vw;max-height:100vh}.pjr{flex-wrap:wrap}}
